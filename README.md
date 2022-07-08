@@ -1,6 +1,7 @@
 # scaffold
 > python microservices scaffold build with sanic, sqlalchemy and pydantic
 
+[![codecov](https://codecov.io/gh/ling7334/sanic-scaffold/branch/main/graph/badge.svg?token=UvXvZbTLGv)](https://codecov.io/gh/ling7334/sanic-scaffold)
 ## Tech Stacks
 
 | Stack | Package | Version | Remark |
