@@ -38,15 +38,17 @@
 
 | File | Description |
 | --- | --- |
+| `.gitignore` | Define all files need to be ignored by git |
 | `LICENSE` | Project license |
 | `config.json` | Application settings |
+| `Procfile` | Heroku deployment config file |
 | `poetry.lock` | Poetey lock file contain all dependency with version |
 | `py.typed` | Empty file indicate the project is fully typed |
 | `pyproject.toml` | Project configuration |
 | `README.md` | Project description file |
 | `server.py` | Project entry |
 | `settings.py` | Setting definition |
-| `setup.py` | cantain setup function for application |
+| `setup.py` | Contain setup function for application |
 | `version.py` | Define the verison of project |
 
 ## Installation
@@ -94,7 +96,7 @@ poetry is used to manage the project dependency.
 7. poetry
 
     Poetry is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.  
-    > If `poetry` is perferred, see[poetry installation guide](https://python-poetry.org/docs/#installation)
+    > If `poetry` is perferred, see [poetry installation guide](https://python-poetry.org/docs/#installation)
 
 ### Dependency
 #### Install with poetry
@@ -121,7 +123,7 @@ pip install -r requirements.txt
 ### Configuration
 Take advantage of pydantic's setting management, we can use environment variable for configuration.
 
-see[environment variable](https://pydantic-docs.helpmanual.io/usage/settings/#environment-variable-names)
+see [environment variable](https://pydantic-docs.helpmanual.io/usage/settings/#environment-variable-names)
 1. environment variable
 
     environment variable start with `APP_` will be used as configuration.
