@@ -1,0 +1,75 @@
+[tool.poetry]
+name = "scaffold"
+version = "0.1.0"
+description = ""
+authors = ["Flynn <ling7334@gmail.com>"]
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+default = true
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^1.9.1"
+asyncpg = "^0.25.0"
+sanic = {extras = ["ext"], version = "^22.3.2"}
+redis = {extras = ["mypy"], version = "^4.3.4" }
+SQLAlchemy = {extras = ["mypy"], version = "^1.4", allow-prereleases = true}
+sentry-sdk = { version = "^1.6.0", optional = true }
+aio-pika = { version = "^8.0.3", optional = true }
+orjson = { version = "^3.7.6", optional = true }
+
+[tool.poetry.extras]
+sentry = [
+  "sentry-sdk"
+]
+rabbitmq = [
+  "aio-pika"
+]
+orjson = [
+  "orjson"
+]
+all = [
+  "sentry-sdk",
+  "aio-pika",
+  "orjson"
+]
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+sanic-testing = "^22.3.0"
+mypy = "^0.961"
+flake8 = "^4.0.1"
+black = "^22.3.0"
+isort = "^5.10.1"
+pytest-asyncio = "^0.18.3"
+
+[tool.poetry.scripts]
+migrate = ''
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+plugins = [
+  "pydantic.mypy"
+]
+
+follow_imports = "silent"
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_any_generics = true
+check_untyped_defs = true
+no_implicit_reexport = true
+
+# for strict mypy: (this is the tricky one :-))
+disallow_untyped_defs = true
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+warn_untyped_fields = true
