@@ -1,5 +1,10 @@
 try:
-    from aio_pika.abc import AbstractChannel, AbstractConnection, AbstractIncomingMessage, ConsumerTag
+    from aio_pika.abc import (
+        AbstractChannel,
+        AbstractConnection,
+        AbstractIncomingMessage,
+        ConsumerTag,
+    )
 except ImportError:
     pass
 else:

@@ -1,5 +1,6 @@
 # from tests import test_blueprint
 from sanic import Sanic
+
 from utils.autodiscovery import autodiscover
 
 

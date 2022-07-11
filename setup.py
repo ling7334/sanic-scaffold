@@ -1,7 +1,7 @@
 from sanic import Request, Sanic
-from sanic.response import BaseHTTPResponse, HTTPResponse
+from sanic.errorpages import RENDERERS_BY_CONFIG, HTMLRenderer
 from sanic.log import logger
-from sanic.errorpages import HTMLRenderer, RENDERERS_BY_CONFIG
+from sanic.response import BaseHTTPResponse, HTTPResponse
 
 from settings import Settings
 from version import __version__
@@ -85,8 +85,12 @@ def setup_database(app: Sanic, conf: Settings) -> None:
         return None
 
     try:
+        from sqlalchemy.ext.asyncio import (
+            AsyncEngine,
+            AsyncSession,
+            create_async_engine,
+        )
         from sqlalchemy.orm import sessionmaker
-        from sqlalchemy.ext.asyncio import AsyncEngine, AsyncSession, create_async_engine
     except ImportError:
         return None
 

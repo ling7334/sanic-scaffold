@@ -11,8 +11,8 @@ try:
 except ImportError:
     pass
 try:
-    from sqlalchemy import __version__ as sqlalchemy_version
     from asyncpg import __version__ as asyncpg_version
+    from sqlalchemy import __version__ as sqlalchemy_version
     from sqlalchemy.ext.asyncio import AsyncSession
 except ImportError:
     pass
@@ -22,8 +22,8 @@ try:
 except ImportError:
     pass
 from typing import Union
-from pydantic import __version__ as pydantic_version
 
+from pydantic import __version__ as pydantic_version
 from sanic import Request
 from sanic import __version__ as sanic_version
 

@@ -1,12 +1,12 @@
 from glob import glob
 from importlib import import_module, util
 from inspect import getmembers
-from pathlib import Path
 from os.path import split
+from pathlib import Path
 from types import ModuleType
 from typing import Union
-from sanic import Sanic
 
+from sanic import Sanic
 from sanic.blueprints import Blueprint
 
 

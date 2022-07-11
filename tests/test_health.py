@@ -1,6 +1,7 @@
 import json
-import pytest
 import os
+
+import pytest
 from sanic import Sanic
 from sanic_testing.testing import SanicASGITestClient
 

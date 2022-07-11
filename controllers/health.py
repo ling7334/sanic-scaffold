@@ -1,4 +1,5 @@
 from sanic import Blueprint, HTTPResponse, Request, json
+
 from services.health import health
 
 HealthBP = Blueprint("health")

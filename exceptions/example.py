@@ -1,5 +1,6 @@
-from sanic.exceptions import SanicException
 from typing import Any, Dict
+
+from sanic.exceptions import SanicException
 
 
 class ExampleException(SanicException):

@@ -1,6 +1,6 @@
 try:
     from aio_pika import ExchangeType
-    from aio_pika.abc import AbstractMessage, AbstractConnection, TimeoutType
+    from aio_pika.abc import AbstractConnection, AbstractMessage, TimeoutType
     from aiormq.abc import ConfirmationFrameType
 except ImportError:
     pass

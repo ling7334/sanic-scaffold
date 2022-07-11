@@ -2,6 +2,7 @@ import os
 
 import pytest
 from pydantic import BaseSettings, ValidationError
+
 from settings import Settings, json_config_settings_source
 
 
